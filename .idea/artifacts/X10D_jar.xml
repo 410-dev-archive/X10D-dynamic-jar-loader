@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="X10D:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/X10D_jar</output-path>
+    <root id="archive" name="X10D.jar">
+      <element id="module-output" name="X10D" />
+    </root>
+  </artifact>
+</component>
