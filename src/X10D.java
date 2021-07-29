@@ -7,6 +7,9 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarInputStream;
 
 public class X10D {
+
+    private static int loaderCompatibility = 1;
+
     public static X10Sion getX10SionObject(String jarPath, String className, Object ... initArgs) throws Exception {
         ArrayList<Class> classes = loadJarFile(jarPath);
         X10Sion xtend = null;
@@ -17,6 +20,8 @@ public class X10D {
             }
         }
         if (xtend == null) throw new Exception("Unable to find class: " + className);
+        if (xtend.X10SionCompatibility() > loaderCompatibility) throw new Exception("Program is too new to load.");
+        if (xtend.X10SionCompatibility() < loaderCompatibility) System.out.println("[Warning] Program is older than loader. Program may crash.");
         return xtend;
     }
 
