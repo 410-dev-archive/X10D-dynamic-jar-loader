@@ -2,19 +2,5 @@
 Load jar dynamically.
 External jar can be loaded and classes inside the jar can be called during runtime. 
 
-To write a program that is compatible with this loader, implement X10Sion interface (which is included)
-When implemented, override all functions.
-
-X10SionCompatibility: Return X10SION_COMPAT
-
-X10SionVersion: Return X10SION_VERSION
-
-getBuild: Return your program's build as integer
-
-getName: Return your program's name
-
-getVendor: Return your name
-
-getVersion: Return your program's version
-
-run(Object[] parameters): This method will be called, so main codes should go here.
+This is not purely written by me, but I have no idea where I got most of these codes from.
+All of these codes are just like my old notes.
